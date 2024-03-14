@@ -1,26 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { SiLeetcode } from "react-icons/si";
 import { MdNotificationsNone } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import pic from "../../assets/pic.jpg";
+import Topbar from "../ui/Topbar";
+import SideBar from "../ui/SideBar";
 
 function Home() {
+  const [modal, setmodal] = useState(false);
+  const [smallModal, setsmallModal] = useState(false);
+  function handleClick() {
+    setmodal(true);
+  }
+  function handleHamburgerClick() {
+    setsmallModal(true);
+  }
+
   return (
     <div className=" bg-slate-900 text-white flex justify-between md:justify-start md:gap-x-10 ">
       <div className="p-4">
         <div>
           <Link to="/">
-            <SiLeetcode size={28} className="cursor-pointer" />
+            <SiLeetcode
+              size={28}
+              className="cursor-pointer hover:text-slate-400"
+            />
           </Link>
         </div>
       </div>
       <div className="p-4 md:hidden">
-        <div>
+        <div className="cursor-pointer" onClick={handleHamburgerClick}>
           <GiHamburgerMenu size={32} />
         </div>
       </div>
+      {smallModal && <SideBar setshow={setsmallModal} />}
       <div className="hidden md:flex justify-start gap-x-6">
         <div className=" p-4 text-md  text-slate-400 hover:text-white cursor-pointer font-medium   ">
           <Link to="/explore">Explore</Link>
@@ -43,15 +58,19 @@ function Home() {
           </div>
         </div>
         <div className=" p-3">
-          <div className=" ">
-            <Link to="/profile">
-              <img
-                src={pic}
-                className="h-10 w-10 rounded-full hover:opacity-80 cursor-pointer object-cover"
-              ></img>
-            </Link>
+          <div className="">
+            <img
+              src={pic}
+              className="h-10 w-10 rounded-full hover:opacity-80 cursor-pointer object-cover"
+              onClick={handleClick}
+            ></img>
           </div>
         </div>
+        {modal && (
+          <>
+            <Topbar setshow={setmodal} />
+          </>
+        )}
       </div>
     </div>
   );
