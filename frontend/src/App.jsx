@@ -4,6 +4,11 @@ import "./App.css";
 const Test = lazy(() => import("./components/Test"));
 const Test2 = lazy(() => import("./components/Test2"));
 import Home from "./components/pages/Home";
+const Main = lazy(() => import("./components/Main"));
+const Explore = lazy(() => import("./components/pages/Explore"));
+const Problem = lazy(() => import("./components/pages/Problem"));
+const Discuss = lazy(() => import("./components/pages/Discuss"));
+const Profile = lazy(() => import("./components/pages/Profile"));
 
 function App() {
   return (
@@ -11,18 +16,42 @@ function App() {
       <Home />
       <Routes>
         <Route
-          path="/test"
+          path="/"
           element={
             <Suspense fallback="Loading..">
-              <Test />
+              <Main />
             </Suspense>
           }
         />
         <Route
-          path="/test2"
+          path="/explore"
           element={
             <Suspense fallback="Loading..">
-              <Test2 />
+              <Explore />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/problem"
+          element={
+            <Suspense fallback="Loading..">
+              <Problem />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/discuss"
+          element={
+            <Suspense fallback="Loading..">
+              <Discuss />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <Suspense fallback="Loading..">
+              <Profile />
             </Suspense>
           }
         />
