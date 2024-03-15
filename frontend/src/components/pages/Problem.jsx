@@ -58,17 +58,17 @@ function Problem() {
   ];
 
   return (
-    <div className="md:p-4">
+    <div className="md:p-4 pt-2">
       <div className="  md:flex md:justify-start gap-x-2  ">
         {cardData.map((data) => {
           return (
-            <div key={data.id} className="">
+            <div key={data.id} className="p-1">
               <Card data={data} />
             </div>
           );
         })}
       </div>
-      <div className="grid grid-cols-12   gap-x-2 pt-4 gap-y-4">
+      <div className="grid grid-cols-12   gap-x-2 pt-4 gap-y-4 p-1">
         <div className="  col-span-12 md:col-span-9 bg-slate-200 rounded-lg">
           <StudyPlan />
         </div>
