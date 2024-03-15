@@ -19,8 +19,8 @@ function Home() {
   }
 
   return (
-    <div className=" bg-slate-900 text-white flex justify-between md:justify-start md:gap-x-10 ">
-      <div className="p-4">
+    <div className=" bg-slate-900 text-white flex justify-between md:justify-start md:gap-x-10  sticky top-0 ">
+      <div className="p-4 sticky">
         <div>
           <Link to="/">
             <SiLeetcode

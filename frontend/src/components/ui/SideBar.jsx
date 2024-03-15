@@ -13,14 +13,15 @@ import { GrTask } from "react-icons/gr";
 import { IoIosChatbubbles } from "react-icons/io";
 
 function SideBar({ setshow }) {
+  function handleCloseSideBar() {
+    setshow(false);
+  }
   return (
     <>
       <div className=" fixed top-16 right-0 h-full w-[80%] bg-gray-100 p-2">
         <span
           className="flex justify-end text-black cursor-pointer"
-          onClick={() => {
-            setshow(false);
-          }}
+          onClick={handleCloseSideBar}
         >
           <MdOutlineShortcut size={24} />
         </span>
@@ -30,9 +31,7 @@ function SideBar({ setshow }) {
               <img
                 src={pic}
                 className="h-16 w-16 rounded-full object-cover"
-                onClick={() => {
-                  setshow(false);
-                }}
+                onClick={handleCloseSideBar}
               ></img>
             </Link>
           </div>
@@ -57,7 +56,10 @@ function SideBar({ setshow }) {
             <div className=" flex justify-center">
               <GiProgression size={24} />
             </div>
-            <div className="pt-1"> Progress</div>
+            <div className="pt-1" onClick={handleCloseSideBar}>
+              {" "}
+              Progress
+            </div>
           </div>
         </div>
         <div className="pt-8">
@@ -66,7 +68,10 @@ function SideBar({ setshow }) {
               <MdOutlineExplore size={20} />
             </div>
             <div className="text-sm hover:opacity-80 cursor-pointer">
-              Explore
+              <Link to="/explore" onClick={handleCloseSideBar}>
+                {" "}
+                Explore
+              </Link>
             </div>
           </div>
           <div className="flex justify-start gap-x-4 text-gray-600 pt-4">
@@ -74,7 +79,10 @@ function SideBar({ setshow }) {
               <GrTask size={20} />
             </div>
             <div className="text-sm hover:opacity-80 cursor-pointer">
-              Problem
+              <Link to="/problem" onClick={handleCloseSideBar}>
+                {" "}
+                Problem
+              </Link>
             </div>
           </div>
           <div className="flex justify-start gap-x-4 text-gray-600 pt-4">
@@ -82,14 +90,20 @@ function SideBar({ setshow }) {
               <IoIosChatbubbles size={20} />
             </div>
             <div className="text-sm hover:opacity-80 cursor-pointer">
-              Discuss
+              <Link to="/discuss" onClick={handleCloseSideBar}>
+                {" "}
+                Discuss
+              </Link>
             </div>
           </div>
           <div className="flex justify-start gap-x-4 text-gray-600 pt-4">
             <div>
               <MdStarRate size={20} />
             </div>
-            <div className="text-sm hover:opacity-80 cursor-pointer">
+            <div
+              className="text-sm hover:opacity-80 cursor-pointer"
+              onClick={handleCloseSideBar}
+            >
               Rate Us
             </div>
           </div>
@@ -97,7 +111,10 @@ function SideBar({ setshow }) {
             <div>
               <FaGithub size={20} />
             </div>
-            <div className="text-sm hover:opacity-80 cursor-pointer">
+            <div
+              className="text-sm hover:opacity-80 cursor-pointer"
+              onClick={handleCloseSideBar}
+            >
               Like the Project
             </div>
           </div>
@@ -105,7 +122,10 @@ function SideBar({ setshow }) {
             <div>
               <MdLogout size={20} />
             </div>
-            <div className="text-sm hover:opacity-80 cursor-pointer">
+            <div
+              className="text-sm hover:opacity-80 cursor-pointer"
+              onClick={handleCloseSideBar}
+            >
               Log Out
             </div>
           </div>
