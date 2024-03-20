@@ -4,7 +4,7 @@ import "./App.css";
 const Test = lazy(() => import("./components/Test"));
 const Test2 = lazy(() => import("./components/Test2"));
 import Home from "./components/pages/Home";
-const Main = lazy(() => import("./components/Main"));
+const Main = lazy(() => import("./components/pages/Main"));
 const Explore = lazy(() => import("./components/pages/Explore"));
 const Problem = lazy(() => import("./components/pages/Problem"));
 const Discuss = lazy(() => import("./components/pages/Discuss"));

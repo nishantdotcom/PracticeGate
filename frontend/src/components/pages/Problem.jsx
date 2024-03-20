@@ -58,7 +58,7 @@ function Problem() {
   ];
 
   return (
-    <div className="md:p-4 pt-2">
+    <div className="md:p-4 pt-2 bg-[#414a4c] h-screen">
       <div className="  md:flex md:justify-start gap-x-2  ">
         {cardData.map((data) => {
           return (
