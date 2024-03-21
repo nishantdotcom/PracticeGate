@@ -22,13 +22,13 @@ function Heading() {
         <div className="md:w-[50%]">
           <div className=" text-5xl m-6 font-extrabold tracking-tight">
             <div className="flex justify-center md:justify-start text-slate-300 text-opacity-90">
-              Practise Make
+              Practice Makes
             </div>
             <div className="flex justify-center md:justify-start text-green-500 pt-2">
               A Man Perfect
             </div>
           </div>
-          <div className="text-lg opacity-90  text-white m-8 md:m-6 tracking-wider ">
+          <div className="text-lg  text-white m-8 md:m-6 tracking-wider ">
             Topic-wise practice of GATE CSE previous year questions is an
             effective approach for candidates preparing for the GATE 2024 CSE
             examination.

@@ -5,6 +5,7 @@ import { FaEye } from "react-icons/fa";
 import { IoChatbubbles } from "react-icons/io5";
 import { FaRegSquareCheck } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function SideProfile() {
   return (
     <div className="text-white  rounded-lg shadow-inner  p-4 bg-gray-800">
@@ -21,9 +22,11 @@ function SideProfile() {
           </div>
         </div>
       </div>
-      <div className="mt-4  flex justify-center text-[#2CBB5D] text-lg p-2 rounded-lg bg-[#2CBB5D1F] cursor-pointer">
-        Edit Profile
-      </div>
+      <Link to="/edit-profile">
+        <div className="mt-4  flex justify-center text-[#2CBB5D] text-lg p-2 rounded-lg bg-[#2CBB5D1F] cursor-pointer">
+          Edit Profile
+        </div>
+      </Link>
       <div className=" mt-4">
         <div className=" flex justify-start gap-x-4 text-slate-300 pt-4">
           <div className=" ">

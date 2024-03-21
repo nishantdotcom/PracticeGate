@@ -55,10 +55,25 @@ function Problem() {
       link: "/2019",
       year: 2019,
     },
+    {
+      id: 6,
+      link: "/2018",
+      year: 2018,
+    },
+    {
+      id: 7,
+      link: "/2017",
+      year: 2017,
+    },
+    {
+      id: 8,
+      link: "/2016",
+      year: 2016,
+    },
   ];
 
   return (
-    <div className="md:p-4 pt-2 bg-[#414a4c] h-screen">
+    <div className="md:p-4 pt-2 bg-[#313131] h-max-screen">
       <div className="  md:flex md:justify-start gap-x-2  ">
         {cardData.map((data) => {
           return (
@@ -69,7 +84,7 @@ function Problem() {
         })}
       </div>
       <div className="grid grid-cols-12   gap-x-2 pt-4 gap-y-4 p-1">
-        <div className="  col-span-12 md:col-span-9 bg-slate-200 rounded-lg">
+        <div className="  col-span-12 md:col-span-9 bg-[#313131] rounded-lg">
           <StudyPlan />
         </div>
         <div className="col-span-12   md:col-span-3  bg-slate-200 rounded-lg ">
