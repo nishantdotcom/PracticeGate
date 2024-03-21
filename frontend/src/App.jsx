@@ -4,6 +4,7 @@ import "./App.css";
 const Test = lazy(() => import("./components/Test"));
 const Test2 = lazy(() => import("./components/Test2"));
 import Home from "./components/pages/Home";
+import Question from "./components/pages/Question";
 
 const Main = lazy(() => import("./components/pages/Main"));
 const Explore = lazy(() => import("./components/pages/Explore"));
@@ -11,7 +12,6 @@ const Problem = lazy(() => import("./components/pages/Problem"));
 const Discuss = lazy(() => import("./components/pages/Discuss"));
 const Profile = lazy(() => import("./components/pages/Profile"));
 const EditProfile = lazy(() => import("./components/pages/EditProfile"));
-const Question = lazy(() => import("./components/pages/Question"));
 
 function App() {
   return (
@@ -66,14 +66,7 @@ function App() {
             </Suspense>
           }
         />
-        <Route
-          path="/question"
-          element={
-            <Suspense fallback="Loading..">
-              <Question />
-            </Suspense>
-          }
-        />
+        <Route path="/question" element={<Question />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import MainLeftHeader from "./MainLeftHeader";
 import FrontCard from "./FrontCard";
+import { Link } from "react-router-dom";
 
 function Heading() {
   return (
@@ -10,6 +11,7 @@ function Heading() {
           <div className="text-gray-100 font-bold tracking-wide text-lg hover:bg-slate-600 hover:opacity-55 hover:rounded-xl  p-1">
             <div className="text-2xl">📋</div>
           </div>
+
           <div className="text-gray-100 font-bold tracking-wide text-lg hover:bg-slate-600 hover:opacity-55 hover:rounded-xl  p-2">
             Practise Gate
           </div>
@@ -34,11 +36,13 @@ function Heading() {
             examination.
           </div>
           <div className="m-6">
-            <div className="pt-2 pb-2 flex justify-center md:justify-start">
-              <button className=" w-64 md:p-4 p-2  rounded-lg bg-green-500 md:text-xl font-bold text-gray-200 hover:bg-green-600">
-                Start Practise
-              </button>
-            </div>
+            <Link to="/question">
+              <div className="pt-2 pb-2 flex justify-center md:justify-start">
+                <button className=" w-64 md:p-4 p-2  rounded-lg bg-green-500 md:text-xl font-bold text-gray-200 hover:bg-green-600 ">
+                  Start Practise
+                </button>
+              </div>
+            </Link>
             <div className=" pt-2 pb-2 flex justify-center md:justify-start">
               <button className="w-64 m:p-4 p-2 rounded-lg md:text-xl font-bold text-slate-300 text-opacity-90 hover:text-slate-100 hover:bg-slate-600 hover:opacity-60 hover:rounded-lg">
                 I dont have an account
