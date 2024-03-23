@@ -11,6 +11,7 @@ import SideBar from "../ui/SideBar";
 function Home() {
   const [modal, setmodal] = useState(false);
   const [smallModal, setsmallModal] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   function handleClick() {
     setmodal(true);
   }
@@ -58,13 +59,35 @@ function Home() {
           </div>
         </div>
         <div className=" p-3">
-          <div className="">
-            <img
-              src={pic}
-              className="h-10 w-10 rounded-full hover:opacity-80 cursor-pointer object-cover"
-              onClick={handleClick}
-            ></img>
-          </div>
+          {isLoggedIn ? (
+            <>
+              <div className="">
+                <img
+                  src={pic}
+                  className="h-10 w-10 rounded-full hover:opacity-80 cursor-pointer object-cover"
+                  onClick={handleClick}
+                ></img>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="  m-2">
+                <div className="flex justify-center gap-x-3 text-sm">
+                  <Link to={"/account/register-profile"}>
+                    <div className=" text-gray-400 cursor-pointer  hover:text-white">
+                      register
+                    </div>
+                  </Link>
+                  <div className="text-gray-400">or</div>
+                  <Link to={"/account/login"}>
+                    <div className="text-gray-400 cursor-pointer hover:text-white">
+                      sign in
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </>
+          )}
         </div>
         {modal && (
           <>

@@ -5,6 +5,10 @@ const Test = lazy(() => import("./components/Test"));
 const Test2 = lazy(() => import("./components/Test2"));
 import Home from "./components/pages/Home";
 import Question from "./components/pages/Question";
+import Login from "./components/pages/Login";
+import Register from "./components/pages/Register";
+import ResetPassword from "./components/pages/ResetPassword";
+import GetProfile from "./components/pages/account/Getprofile";
 
 const Main = lazy(() => import("./components/pages/Main"));
 const Explore = lazy(() => import("./components/pages/Explore"));
@@ -67,6 +71,9 @@ function App() {
           }
         />
         <Route path="/question" element={<Question />} />
+        <Route path="/account/login" element={<Login />} />
+        <Route path="/account/register-profile" element={<Register />} />
+        <Route path="/account/reset-password" element={<ResetPassword />} />
       </Routes>
     </BrowserRouter>
   );
